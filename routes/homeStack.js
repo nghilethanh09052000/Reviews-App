@@ -1,7 +1,8 @@
-import { createStackNavigator } from "@react-navigation/stack";
-import { createAppContainer } from "react-navigation";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native";
 import Home from "../screens/Home";
 import ReviewDetails from "../screens/ReviewDetails";
+
 const screens = {
     Home:{
         screen: Home
@@ -11,5 +12,4 @@ const screens = {
     },
     
 }
-const HomeStack = createStackNavigator(screens)
-export default createAppContainer(HomeStack);
+export const Stack = createNativeStackNavigator()
